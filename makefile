@@ -28,10 +28,10 @@ install:
 	$(GOINSTALL) -v ./...
 
 deps:
-	$(GOGET) "github.com/Sirupsen/logrus"
 	$(GOGET) "github.com/caarlos0/env"
-	# $(GOGET) "gopkg.in/yaml.v2"
 	$(GOGET) "github.com/gorilla/mux"
+	$(GOGET) "github.com/Sirupsen/logrus"
+	$(GOGET) "github.com/stretchr/testify/assert"
 
 lint:
 	$(GOGET) "github.com/golang/lint/golint"

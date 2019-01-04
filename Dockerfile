@@ -7,6 +7,5 @@ RUN  apk add --no-cache git make gcc libc-dev ca-certificates \
 
 FROM library/alpine:3.8
 RUN apk add --no-cache ca-certificates
-# COPY config.yml /config.yml
 COPY --from=build /go/src/github.com/newrushbolt/OctoSummon/bin /OctoSummon
 CMD ["/OctoSummon"]
